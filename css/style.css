@@ -1,0 +1,241 @@
+/* CSS reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/* Css Variables */
+:root{
+    --navbar-height : 59px;
+}
+
+/* Navigation bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content:"" ;
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/*Navigation bar : Logo and Image */
+#logo{
+    margin: 0px 20px;
+}
+#logo img{
+    height: 46px;
+    margin: 8px 20px;
+}
+
+
+/* Navigation bar : list styling */
+#navbar ul{
+    display: flex;
+    font-family: 'Bebas Neue', cursive;
+
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.5rem;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 5px 29px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color:black;
+    background-color: white;
+    opacity: 0.5;
+}
+
+/* Home Section */
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    background : url('../2.jpg') no-repeat center center/cover;
+    top: 0px;
+    left: 0px;
+    height: 728px;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+}
+
+#home h1{
+    color: white;
+    text-align: center; 
+    font-family: 'Roboto Slab', serif;
+}
+
+#home p{
+    color: white;
+    text-align: center; 
+    font-size: 1rem; 
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+
+}
+#services .box{
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 3px 31px;
+    border-radius: 23px;
+    background: #f2f2f2;
+
+
+}
+#services .box img{
+    height: 118px;
+    margin: auto;
+    display: block;
+}
+#services .box p{
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+/* Client Section */
+#clients{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+}
+
+#clients img{
+    height: 112px;
+
+}
+
+#client-section{
+    position: relative;
+    /* height: 344px; */
+
+}
+#client-section::before{
+    content:"" ;
+    position: absolute;
+    background: url('../bg.jpg');
+    width:100%;
+    height:100% ;
+    z-index: -1;
+    opacity: 0.8; 
+}
+
+.client-item{
+    padding:50px ;
+
+}
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+z-index: -1;
+opacity: 0.7;
+background: url('../contact-us.jpg');
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 5px 20px ;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+#contact-box input,
+#contact-box textarea{
+     width: 100%;
+     padding: 0.12rem;
+     border-radius: 20px;
+     font-size: 1rem;
+}
+
+#contact-box form{
+    width: 30%;
+    
+}
+#contact-box label{
+    font-size: 1.2rem;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+
+/* Utility class */
+
+.h-primary{
+    font-size: 2.5rem;
+    padding: 13px ;
+    font-family: 'Roboto Slab', serif;
+}
+
+.h-secondary{
+    font-size: 1.3rem;
+    padding: 13px ;
+    font-family: 'Roboto Slab', serif;
+}
+.btn{
+    padding: 4px 25px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 21px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.center{
+    text-align: center;
+}
+ 
+.rotate{
+    transition: all 0.5s ease-in-out;
+}
+.rotate:hover{
+    
+    transform: rotate(360deg);
+}
